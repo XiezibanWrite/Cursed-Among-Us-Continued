@@ -49,7 +49,7 @@ The fun of this comes from experiencing everything first-hand. You should play a
 	- Weapons
 - Others
 	- Colors
-	- Blocked Words
+	- Blocked Words (Not Working on Latest Version) 
 	- Auto vent
 
 ---
