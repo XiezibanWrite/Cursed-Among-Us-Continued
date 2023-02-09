@@ -1,43 +1,47 @@
-﻿using System;
-using BepInEx;
-using BepInEx.IL2CPP;
-using CursedAmongUs.Source;
+﻿using BepInEx;
+using BepInEx.Configuration;
+using BepInEx.Unity.IL2CPP;
 using CursedAmongUs.Source.Tasks;
+using CursedAmongUs.Source;
 using HarmonyLib;
+using Il2CppInterop.Runtime.Injection;
 using Reactor;
-using UnhollowerRuntimeLib;
+using Reactor.Utilities;
 using UnityEngine;
-using Object = UnityEngine.Object;
 
-namespace CursedAmongUs
+namespace CursedAmongUs;
+
+[BepInAutoPlugin]
+[BepInProcess("Among Us.exe")]
+[BepInDependency(ReactorPlugin.Id)]
+public partial class CursedAmongUs : BasePlugin
 {
-	[BepInPlugin(Id)]
-	[BepInProcess("Among Us.exe")]
-	[BepInDependency(ReactorPlugin.Id)]
-	public class CursedAmongUs : BasePlugin
-	{
-		public const String Id = "DevsUs.CursedAmongUs";
-		public Harmony Harmony { get; } = new(Id);
+    public Harmony Harmony { get; } = new(Id);
 
-		public override void Load()
-		{
-			Harmony.PatchAll();
-		}
-	}
+    public ConfigEntry<string> ConfigName { get; private set; }
 
-	[HarmonyPatch(typeof(AmongUsClient), nameof(AmongUsClient.Awake))]
-	public static class AmongUsClientPatch
-	{
-		public static void Postfix()
-		{
-			GameObject gameObject = GameObject.Find("CursedAmongUs");
-			if (gameObject != null) return;
-			ClassInjector.RegisterTypeInIl2Cpp<CursedGameData>();
-			ClassInjector.RegisterTypeInIl2Cpp<CursedWeapons.WeaponsCustom>();
-			ClassInjector.RegisterTypeInIl2Cpp<UploadDataCustom>();
-			GameObject cursedObject = new("CursedAmongUs");
-			Object.DontDestroyOnLoad(cursedObject);
-			_ = cursedObject.AddComponent<CursedGameData>();
-		}
-	}
+    public override void Load()
+    {
+        ConfigName = Config.Bind("Fake", "Name", "as");
+
+        Harmony.PatchAll();
+    }
+
+    [HarmonyPatch(typeof(PlayerControl), nameof(PlayerControl.FixedUpdate))]
+    public static class ExamplePatch
+    {
+        public static void Postfix(PlayerControl __instance)
+        {
+            __instance.cosmetics.nameText.text = PluginSingleton<CursedAmongUs>.Instance.ConfigName.Value;
+
+            GameObject gameObject = GameObject.Find("CursedAmongUs");
+            if (gameObject != null) return;
+            ClassInjector.RegisterTypeInIl2Cpp<CursedGameData>();
+            ClassInjector.RegisterTypeInIl2Cpp<CursedWeapons.WeaponsCustom>();
+            ClassInjector.RegisterTypeInIl2Cpp<UploadDataCustom>();
+            GameObject cursedObject = new("CursedAmongUs");
+            Object.DontDestroyOnLoad(cursedObject);
+            _ = cursedObject.AddComponent<CursedGameData>();
+        }
+    }
 }

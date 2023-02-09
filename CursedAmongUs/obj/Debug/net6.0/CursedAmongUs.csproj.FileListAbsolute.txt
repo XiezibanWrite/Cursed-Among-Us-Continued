@@ -1,0 +1,13 @@
+C:\Users\Win11\source\repos\CursedAmongUs\CursedAmongUs\bin\Debug\net6.0\CursedAmongUs.deps.json
+C:\Users\Win11\source\repos\CursedAmongUs\CursedAmongUs\bin\Debug\net6.0\CursedAmongUs.dll
+C:\Users\Win11\source\repos\CursedAmongUs\CursedAmongUs\obj\Debug\net6.0\CursedAmongUs.csproj.AssemblyReference.cache
+C:\Users\Win11\source\repos\CursedAmongUs\CursedAmongUs\obj\Debug\net6.0\CursedAmongUs.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Win11\source\repos\CursedAmongUs\CursedAmongUs\obj\Debug\net6.0\CursedAmongUs.AssemblyInfoInputs.cache
+C:\Users\Win11\source\repos\CursedAmongUs\CursedAmongUs\obj\Debug\net6.0\CursedAmongUs.AssemblyInfo.cs
+C:\Users\Win11\source\repos\CursedAmongUs\CursedAmongUs\obj\Debug\net6.0\CursedAmongUs.csproj.CoreCompileInputs.cache
+C:\Users\Win11\source\repos\CursedAmongUs\CursedAmongUs\obj\Debug\net6.0\CursedAmongUs.dll
+C:\Users\Win11\source\repos\CursedAmongUs\CursedAmongUs\obj\Debug\net6.0\refint\CursedAmongUs.dll
+C:\Users\Win11\source\repos\CursedAmongUs\CursedAmongUs\obj\Debug\net6.0\ref\CursedAmongUs.dll
+G:\Epic Games\x64\AmongUs\BepInEx\plugins\Debug\net6.0\CursedAmongUs.deps.json
+G:\Epic Games\x64\AmongUs\BepInEx\plugins\Debug\net6.0\CursedAmongUs.dll
+C:\Users\Win11\source\repos\CursedAmongUs\CursedAmongUs\obj\Debug\net6.0\CursedAmongUs.csproj.CopyComplete

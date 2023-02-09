@@ -6,7 +6,7 @@ namespace CursedAmongUs.Source.Others
 	internal static class CursedBlockedWords
 	{
 		//Feel free to add to these lists!
-		private static readonly String[] UnblockedAll =
+		/*private static readonly String[] UnblockedAll =
 		{
 			"fuck", "assface", "blackcock", "blowjob", "bullshit", "c0ck~", "cunt", "dick", "hentai", "jackoff",
 			"jackass", "nazi", "nlgger", "nlgga", "n1gga", "n1gger", "penis", "puta~", "puto~", "rape", "weiner",
@@ -21,16 +21,16 @@ namespace CursedAmongUs.Source.Others
 			"chasing", "nudes", "coll", "milk", "banana", "cnn", "fox", "npr", "msnbc", "ironman", "2024", "2020",
 			"france", "french", "francaise", "francais", "fortnite", "brazil", "brasil", "brazilian", "amogus",
 			"imposter", "christian", "jewish", "jew", "catholic", "sussy"
-		};
+		};*/
 
-		[HarmonyPatch(typeof(LetterTree))]
-		private static class LetterTreePatch
+		//[HarmonyPatch(typeof(LetterTree))]
+		/*private static class LetterTreePatch
 		{
 			[HarmonyPatch(nameof(LetterTree.AddWord))]
 			[HarmonyPrefix]
 			private static Boolean AddWordPrefix(String word)
 			{
-				if (word == BlockedWords.AllWords[0])
+				if (true)
 				{
 					foreach (String t in BlockedAll)
 						BlockedWords.SkipList.AddWord(t);
@@ -38,6 +38,6 @@ namespace CursedAmongUs.Source.Others
 
 				return !Array.Exists(UnblockedAll, ele => ele == word);
 			}
-		}
+		}*/
 	}
 }

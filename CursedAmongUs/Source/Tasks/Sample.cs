@@ -20,7 +20,7 @@ namespace CursedAmongUs.Source.Tasks
 			{
 				SampleMinigame.ProcessingStrings = new StringNames[]
 				{
-					CustomStringName.Register("THIS WILL TAKE FOREVER")
+					//CustomStringName.Register("THIS WILL TAKE FOREVER")
 				};
 				
 				__instance.TimePerStep = 3640f;

@@ -4,7 +4,7 @@ using System.Linq;
 using HarmonyLib;
 using Il2CppSystem.Text;
 using Reactor;
-using Reactor.Extensions;
+using Reactor.Utilities.Extensions;
 using UnityEngine;
 using Object = UnityEngine.Object;
 using Random = UnityEngine.Random;
@@ -117,9 +117,9 @@ namespace CursedAmongUs.Source.Tasks
 				Int32 divertTasks = PlayerTasksArray.Count(x => x.TaskType is TaskTypes.DivertPower);
 				if (!_isIntermission)
 				{
-					Logger<CursedAmongUs>.Debug("Checking child count");
+					//Logger<CursedAmongUs>.Debug("Checking child count");
 					if (__instance.transform.childCount <= 100) return;
-					Logger<CursedAmongUs>.Debug("Attempting to destroy children");
+					//Logger<CursedAmongUs>.Debug("Attempting to destroy children");
 
 					for (Int32 i = 0; i < __instance.transform.childCount; i++)
 					{
@@ -128,7 +128,7 @@ namespace CursedAmongUs.Source.Tasks
 						child.gameObject.Destroy();
 					}
 
-					Debug.logger.Log("Children destroyed successfully (and legally)");
+					//Debug.logger.Log("Children destroyed successfully (and legally)");
 					
 					return;
 				}

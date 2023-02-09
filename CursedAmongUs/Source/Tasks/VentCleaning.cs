@@ -23,7 +23,7 @@ namespace CursedAmongUs.Source.Tasks
 
 			Int32 randomNumber = Random.RandomRangeInt(0, allButtons.Count);
 			allButtons[randomNumber].DoPurchase();
-			allButtons[randomNumber].SetPurchased();
+			//allButtons[randomNumber].SetPurchased();
 			StoreMenu.Instance.SetProduct(allButtons[randomNumber]);
 			GameObject dialogueBox = GameObject.Find("Main Camera/Hud/GenericDialogue");
 			if (dialogueBox != null)

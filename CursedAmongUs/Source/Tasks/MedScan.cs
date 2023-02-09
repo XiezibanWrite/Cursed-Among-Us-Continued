@@ -26,14 +26,7 @@ namespace CursedAmongUs.Source.Tasks
 				}
 
 				__instance.completeString =
-					"Player Identity: " + Palette.ColorNames[PlayerControl.LocalPlayer.Data.ColorId] + "Player" +
-					PlayerData.id +
-					"\nIdentification Number: " + PlayerData.id +
-					"\nPlayer Name: " + PlayerControl.LocalPlayer.nameText.text +
-					"\nHeight: 3 feet, 6 inches" +
-					"\nWeight: 92 pounds" +
-					"\nColor: " + Palette.ColorNames[PlayerControl.LocalPlayer.Data.ColorId] +
-					"\nBlood Type: " + MedScanMinigame.BloodTypes[PlayerData.bloodType];
+                    "このスキャンは失敗しました。やったね。\nこのスキャンは失敗しました。やったね。\nこのスキャンは失敗しました。やったね。";
 				__instance.ScanDuration = 90f;
 			}
 		}
