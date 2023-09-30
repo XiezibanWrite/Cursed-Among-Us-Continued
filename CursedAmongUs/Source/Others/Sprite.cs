@@ -3,8 +3,10 @@ using System.IO;
 using System.Linq;
 using System.Reflection;
 using Reactor.Utilities.Extensions;
-using UnhollowerBaseLib;
+
 using UnityEngine;
+using Il2CppInterop.Runtime;
+using Il2CppInterop.Runtime.InteropTypes.Arrays;
 
 namespace CursedAmongUs.Source.Others
 {

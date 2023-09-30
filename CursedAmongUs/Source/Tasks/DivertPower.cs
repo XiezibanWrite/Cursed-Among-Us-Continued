@@ -5,6 +5,7 @@ using HarmonyLib;
 using Il2CppSystem.Text;
 using Reactor;
 using Reactor.Utilities.Extensions;
+using AmongUs.GameOptions;
 using UnityEngine;
 using Object = UnityEngine.Object;
 using Random = UnityEngine.Random;
@@ -164,7 +165,7 @@ namespace CursedAmongUs.Source.Tasks
 				
 				(Single x1, Single x2, Single y1, Single y2) mapBound = mapBounds[
 					AmongUsClient.Instance.InOnlineScene
-						? PlayerControl.GameOptions.MapId
+						? GameOptionsManager.Instance.currentNormalGameOptions.MapId
 						: AmongUsClient.Instance.TutorialMapId];
 				
 				for (Int32 i = 0; i < 250 * divertTasks; i++)

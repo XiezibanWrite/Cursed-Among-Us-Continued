@@ -18,12 +18,11 @@ public partial class CursedAmongUs : BasePlugin
 {
     public Harmony Harmony { get; } = new(Id);
 
-    public ConfigEntry<string> ConfigName { get; private set; }
+    public ConfigEntry<System.String> ConfigName { get; private set; }
 
     public override void Load()
     {
-        ConfigName = Config.Bind("Fake", "Name", "as");
-
+       
         Harmony.PatchAll();
     }
 
@@ -32,7 +31,7 @@ public partial class CursedAmongUs : BasePlugin
     {
         public static void Postfix(PlayerControl __instance)
         {
-            __instance.cosmetics.nameText.text = PluginSingleton<CursedAmongUs>.Instance.ConfigName.Value;
+            
 
             GameObject gameObject = GameObject.Find("CursedAmongUs");
             if (gameObject != null) return;

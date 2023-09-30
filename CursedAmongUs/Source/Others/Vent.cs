@@ -19,11 +19,11 @@ namespace CursedAmongUs.Source.Others
 		{
 			[HarmonyPatch(nameof(Vent.SetOutline))]
 			[HarmonyPostfix]
-			private static void SetOutlinePostfix(Vent __instance, Boolean on, Boolean mainTarget)
+			private static void NearbyVents(Vent __instance, Boolean on, Boolean mainTarget)
 			{
 				if (!on || !mainTarget || PlayerControl.LocalPlayer.inVent || LastVent > 0f) return;
 				__instance.Use();
-				LastVent = 10f;
+				LastVent = 5f;
 			}
 		}
 	}
