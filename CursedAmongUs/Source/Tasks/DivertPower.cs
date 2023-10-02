@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using static CursedAmongUs.Languages.Language;
 using HarmonyLib;
 using Il2CppSystem.Text;
 using Reactor;
@@ -79,15 +80,15 @@ namespace CursedAmongUs.Source.Tasks
 				switch (__instance.TaskStep)
 				{
 					case 0:
-						_ = sb.AppendLine($"{divertLocation}: Divert Power (0/2)");
+						_ = sb.AppendLine($"{divertLocation}: {GetString ("DivertPower")}");
 						break;
 					case 1:
-						_ = sb.AppendLine("<color=yellow>???????: Accept Diverted Power (1/2)</color>");
+						_ = sb.AppendLine($"<color=yellow>???????: {GetString("AcceptDivertedPower")}</color>");
 						break;
 					case 2:
 						return true;
 					default:
-						_ = sb.AppendLine($"{divertLocation}: Divert Power (0/2)");
+						_ = sb.AppendLine($"{divertLocation}: {GetString("DivertPower")}");
 						break;
 				}
 

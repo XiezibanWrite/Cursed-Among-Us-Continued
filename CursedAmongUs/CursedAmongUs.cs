@@ -7,8 +7,8 @@ using HarmonyLib;
 using Il2CppInterop.Runtime.Injection;
 using Reactor;
 using Reactor.Utilities;
+using CursedAmongUs.Languages;
 using UnityEngine;
-
 namespace CursedAmongUs;
 
 [BepInAutoPlugin]
@@ -24,15 +24,15 @@ public partial class CursedAmongUs : BasePlugin
     {
        
         Harmony.PatchAll();
-    }
+		Language.Init();
+		LanguagePack.Init();
+	}
 
     [HarmonyPatch(typeof(PlayerControl), nameof(PlayerControl.FixedUpdate))]
     public static class ExamplePatch
     {
         public static void Postfix(PlayerControl __instance)
         {
-            
-
             GameObject gameObject = GameObject.Find("CursedAmongUs");
             if (gameObject != null) return;
             ClassInjector.RegisterTypeInIl2Cpp<CursedGameData>();

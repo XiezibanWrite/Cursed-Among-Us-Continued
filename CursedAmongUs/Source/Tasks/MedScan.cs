@@ -1,5 +1,6 @@
 ﻿using System;
 using HarmonyLib;
+using static CursedAmongUs.Languages.Language;
 
 namespace CursedAmongUs.Source.Tasks
 {
@@ -26,7 +27,7 @@ namespace CursedAmongUs.Source.Tasks
 				}
 
 				__instance.completeString =
-                    "このスキャンは失敗しました。やったね。\nこのスキャンは失敗しました。やったね。\nこのスキャンは失敗しました。やったね。";
+                    $"{GetString("scantext")}";
 				__instance.ScanDuration = 90f;
 			}
 		}

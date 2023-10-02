@@ -31,7 +31,7 @@ namespace CursedAmongUs.Source.Tasks
             [HarmonyPrefix]
             private static void BeginPrefix(WireMinigame __instance)
             {
-                int[] WiresOrder = new int[3] { 8, 16, 70 };
+                int[] WiresOrder = new int[3] { 8, 16, 70};
                 NumWires = WiresOrder[WiresNum];
                 ScalarY = NumWires < 12 ? 1f : 8f / NumWires + 0.3f;
                 Transform ParentAll = GameObject.Find("Main Camera/WireMinigame(Clone)").transform;
