@@ -1,5 +1,5 @@
 [![Discord](https://img.shields.io/discord/845314615524851722.svg?label=&logo=discord&logoColor=ffffff&color=7389D8&labelColor=6A7EC2)](https://discord.gg/dccRRY8dcR)
-[![GitHub release](https://img.shields.io/github/release/Devs-Us/Cursed-Among-Us.svg)](https://GitHub.com/Devs-Us/Cursed-Among-Us/releases/)
+[![GitHub release](https://img.shields.io/github/release/Devs-Us/Cursed-Among-Us.svg)](https://github.com/XiezibanWrite/Cursed-Among-Us-Continued/releases)
 [![Github Downloads](https://img.shields.io/github/downloads/Devs-Us/Cursed-Among-Us/total.svg)](https://github.com/Devs-Us/Cursed-Among-Us/releases)
 
 <h1 align="center">Cursed Among Us</h1>
