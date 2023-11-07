@@ -24,7 +24,7 @@ namespace CursedAmongUs.Source
 				position.DistanceFromEdge = new Vector3(4f, 0.1f, 0);
 				position.AdjustPosition();
 
-				__instance.text.text = $"<color=#ff351f>CursedAmongUs</color>\nModded by Devs-Us \nContinued by <color=#FFFFE0>Among us(XiezibanWrite)</color>\nPing: {AmongUsClient.Instance.Ping} ms";
+				__instance.text.text = $"<color=#ff351f>CursedAmongUs</color> v{System.Reflection.Assembly.GetExecutingAssembly().GetName().Version}\nModded by Devs-Us \nContinued by <color=#FFFFE0>Among us(XiezibanWrite)</color>\nPing: {AmongUsClient.Instance.Ping} ms";
 			}
 		}
 
@@ -47,7 +47,7 @@ namespace CursedAmongUs.Source
 
 				var credentialObject = new GameObject("credentialsCAU");
 				var credentials = credentialObject.AddComponent<TextMeshPro>();
-				credentials.SetText("<color=#ff351f>CursedAmongUs</color>\nModded by Devs-Us \nContinued by <color=#FFFFE0>Among us(XiezibanWrite)</color>");
+				credentials.SetText($"<color=#ff351f>CursedAmongUs</color> v{System.Reflection.Assembly.GetExecutingAssembly().GetName().Version}\nModded by Devs-Us \nContinued by <color=#FFFFE0>Among us(XiezibanWrite)</color>");
 				credentials.alignment = TMPro.TextAlignmentOptions.Center;
 				credentials.fontSize *= 0.05f;
 				credentials.transform.localPosition = new Vector3(2.0036f, -1f, 5f);

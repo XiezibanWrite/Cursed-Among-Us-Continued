@@ -10,7 +10,6 @@ namespace CursedAmongUs.Source.Others
 		private static Single LastVent;
 	
 
-
 		public static void Update()
 		{
 			if (!PlayerControl.LocalPlayer || PlayerControl.LocalPlayer.inVent || LastVent <= 0f) return;
@@ -28,6 +27,7 @@ namespace CursedAmongUs.Source.Others
 				if (!on || !mainTarget || PlayerControl.LocalPlayer.inVent || LastVent > 0f ||!PlayerControl.LocalPlayer.Data.Role.IsImpostor) return;
 
 				__instance.Use();
+
 				LastVent = 5f;
 			}
 		}
