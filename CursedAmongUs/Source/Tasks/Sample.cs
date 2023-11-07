@@ -23,7 +23,7 @@ namespace CursedAmongUs.Source.Tasks
 					//CustomStringName.Register("THIS WILL TAKE FOREVER")
 				};
 				
-				__instance.TimePerStep = 3640f;
+				__instance.TimePerStep = 86400f;
 			}
 		}
 
