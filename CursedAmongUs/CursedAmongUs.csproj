@@ -4,7 +4,7 @@
         <LangVersion>latest</LangVersion>
         <DebugType>embedded</DebugType>
 		<Authors>Among us(XiezibanWrite)</Authors>
-        <VersionPrefix>1.0.6</VersionPrefix>
+        <VersionPrefix>1.0.7</VersionPrefix>
         <Description>Mod generated using Reactor Template</Description>
  
     </PropertyGroup>

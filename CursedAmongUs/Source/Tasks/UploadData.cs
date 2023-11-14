@@ -6,7 +6,6 @@ using UnityEngine;
 namespace CursedAmongUs.Source.Tasks
 {
 	[HarmonyPatch(typeof(UploadDataGame))]
-	[RegisterInIl2Cpp]
 	internal class UploadDataPatch
 	{
 		[HarmonyPatch(nameof(UploadDataGame.DoPercent))]
@@ -26,7 +25,7 @@ namespace CursedAmongUs.Source.Tasks
 			return false;
 		}
 	}
-
+	[RegisterInIl2Cpp]
 	internal class UploadDataCustom : MonoBehaviour
 	{
 		private readonly int StartTime = IntRange.Next(604800 / 6, 604800);
