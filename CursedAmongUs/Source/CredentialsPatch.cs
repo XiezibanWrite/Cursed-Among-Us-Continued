@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.IO;
-using System.Reflection;
 
 
 using HarmonyLib;
-using Il2CppSystem.Reflection;
-using Il2CppSystem.Reflection.Internal;
 using TMPro;
 using UnityEngine;
 
@@ -40,7 +36,7 @@ namespace CursedAmongUs.Source
 				cauLogo.transform.localScale = new Vector3(3.4527f, 2.8873f, 1f);
 				renderer = cauLogo.AddComponent<SpriteRenderer>();
 				renderer.sprite = PictureLoad.LoadSprite("CursedAmongUs.Resources.Banner.png", 300f);
-			
+
 
 				instance = __instance;
 

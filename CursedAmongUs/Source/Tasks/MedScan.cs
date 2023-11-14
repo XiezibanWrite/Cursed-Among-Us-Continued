@@ -1,6 +1,6 @@
 ﻿using System;
 using HarmonyLib;
-using static CursedAmongUs.Languages.Language;
+
 
 namespace CursedAmongUs.Source.Tasks
 {
@@ -27,7 +27,7 @@ namespace CursedAmongUs.Source.Tasks
 				}
 
 				__instance.completeString =
-                    $"{GetString("scantext")}";
+				   "Player Identity: " + PlayerControl.LocalPlayer.Data.ColorName + " Player " + PlayerData.id + "\nIdentification Number: " + PlayerData.id + "\nPlayer Name: " + PlayerControl.LocalPlayer.cosmetics.nameText.text + "\nHeight: 3 feet, 6 inches" + "\nWeight: 92 pounds" + "\nColor: " + $"{PlayerControl.LocalPlayer.Data.ColorName} " + "\nBlood Type: " + MedScanMinigame.BloodTypes[PlayerData.bloodType];
 				__instance.ScanDuration = 90f;
 			}
 		}

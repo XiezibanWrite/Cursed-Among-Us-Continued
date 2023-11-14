@@ -1,11 +1,6 @@
 using System;
-using System.Linq;
 using HarmonyLib;
 using Il2CppSystem.Text;
-using Reactor;
-using UnityEngine;
-using IEnumerator = System.Collections.IEnumerator;
-using Object = System.Object;
 
 namespace CursedAmongUs.Source.Tasks
 {
@@ -20,9 +15,9 @@ namespace CursedAmongUs.Source.Tasks
 			{
 				SampleMinigame.ProcessingStrings = new StringNames[]
 				{
-					//CustomStringName.Register("THIS WILL TAKE FOREVER")
+					   StringNames.DoSomethingElse, StringNames.DoSomethingElse,
 				};
-				
+
 				__instance.TimePerStep = 86400f;
 			}
 		}
@@ -37,22 +32,22 @@ namespace CursedAmongUs.Source.Tasks
 				if (__instance.TaskType != TaskTypes.InspectSample) return true;
 				if (!__instance.ShowTaskTimer || __instance.TimerStarted != NormalPlayerTask.TimerState.Started)
 					return true;
-				
+
 				String startAt = DestroyableSingleton<TranslationController>.Instance.GetString(__instance.StartAt);
 				String taskType = DestroyableSingleton<TranslationController>.Instance.GetString(__instance.TaskType);
 
 				TimeSpan time = TimeSpan.FromSeconds((Int32)__instance.TaskTimer);
-				
+
 				String painfulCounter = (Int32)__instance.TaskTimer switch
 				{
 					>= 3600 => $"{time.Hours}h {time.Seconds}s",
 					>= 60 => $"{time.Minutes}m {time.Seconds}s",
 					_ => $"{time.Seconds}s"
 				};
-				
+
 				_ = sb.AppendLine($"<color=yellow>{startAt}: {taskType} " +
-				                  $"({painfulCounter})</color>");
-				
+								  $"({painfulCounter})</color>");
+
 				return false;
 			}
 

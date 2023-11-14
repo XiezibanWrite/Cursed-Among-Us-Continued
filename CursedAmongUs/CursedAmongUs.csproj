@@ -22,12 +22,7 @@
 	<ItemGroup>
 		<EmbeddedResource Include=".\Resources\**" />
 	</ItemGroup>
-	<ItemGroup>
-	  <None Remove="resources\string.csv" />
-	</ItemGroup>
-	<ItemGroup>
-	  <EmbeddedResource Include="resources\string.csv" />
-	</ItemGroup>
+
 
 
 

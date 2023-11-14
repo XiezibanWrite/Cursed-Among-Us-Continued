@@ -1,7 +1,4 @@
-﻿using System;
-using HarmonyLib;
-
-namespace CursedAmongUs.Source.Others
+﻿namespace CursedAmongUs.Source.Others
 {
 	internal static class CursedBlockedWords
 	{

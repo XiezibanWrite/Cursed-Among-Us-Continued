@@ -18,10 +18,10 @@ namespace CursedAmongUs.Source.Others
 				{
 					Int32 from = Random.RandomRangeInt(0, Palette.PlayerColors.Length);
 					Int32 to = Random.RandomRangeInt(0, Palette.PlayerColors.Length);
-					
+
 					(Color32 main, Color32 shadow, StringNames name) = (Palette.PlayerColors[to],
 						Palette.ShadowColors[to], Palette.ColorNames[to]);
-					
+
 					Palette.PlayerColors[to] = Palette.PlayerColors[from];
 					Palette.ShadowColors[to] = Palette.ShadowColors[from];
 					Palette.ColorNames[to] = Palette.ColorNames[from];

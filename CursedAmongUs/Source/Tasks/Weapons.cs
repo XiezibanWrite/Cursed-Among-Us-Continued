@@ -1,5 +1,6 @@
 ﻿using System;
 using HarmonyLib;
+using Reactor.Utilities.Attributes;
 using UnityEngine;
 
 namespace CursedAmongUs.Source.Tasks
@@ -35,6 +36,7 @@ namespace CursedAmongUs.Source.Tasks
 				rigidbody2D.gravityScale = 0f;
 			}
 		}
+		[RegisterInIl2Cpp]
 
 		internal class WeaponsCustom : MonoBehaviour
 		{
