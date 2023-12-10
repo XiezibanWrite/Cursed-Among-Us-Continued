@@ -1,6 +1,6 @@
 ﻿using System;
 using HarmonyLib;
-using Reactor.Utilities.Attributes;
+
 using UnityEngine;
 
 namespace CursedAmongUs.Source.Tasks
@@ -25,7 +25,7 @@ namespace CursedAmongUs.Source.Tasks
 			return false;
 		}
 	}
-	[RegisterInIl2Cpp]
+
 	internal class UploadDataCustom : MonoBehaviour
 	{
 		private readonly int StartTime = IntRange.Next(604800 / 6, 604800);

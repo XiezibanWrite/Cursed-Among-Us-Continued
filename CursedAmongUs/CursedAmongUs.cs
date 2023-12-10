@@ -1,14 +1,15 @@
 ﻿using BepInEx;
 using BepInEx.Configuration;
 using BepInEx.Unity.IL2CPP;
+using CursedAmongUs.Source.Tasks;
+using CursedAmongUs.Source;
 using HarmonyLib;
-using Reactor;
+using Il2CppInterop.Runtime.Injection;
 using UnityEngine;
 namespace CursedAmongUs;
 
 [BepInAutoPlugin]
 [BepInProcess("Among Us.exe")]
-[BepInDependency(ReactorPlugin.Id)]
 public partial class CursedAmongUs : BasePlugin
 {
 	public Harmony Harmony { get; } = new(Id);
@@ -29,6 +30,9 @@ public partial class CursedAmongUs : BasePlugin
 		{
 			GameObject gameObject = GameObject.Find("CursedAmongUs");
 			if (gameObject != null) return;
+			ClassInjector.RegisterTypeInIl2Cpp<CursedGameData>();
+			ClassInjector.RegisterTypeInIl2Cpp<CursedWeapons.WeaponsCustom>();
+			ClassInjector.RegisterTypeInIl2Cpp<UploadDataCustom>();
 			GameObject cursedObject = new("CursedAmongUs");
 			Object.DontDestroyOnLoad(cursedObject);
 		}
