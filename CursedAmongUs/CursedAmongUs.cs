@@ -37,4 +37,14 @@ public partial class CursedAmongUs : BasePlugin
 			Object.DontDestroyOnLoad(cursedObject);
 		}
 	}
+	[HarmonyPatch(typeof(ModManager), nameof(ModManager.LateUpdate))]
+	class ModManagerLateUpdatePatch
+	{
+		public static void Prefix(ModManager __instance)
+		{
+			__instance.ShowModStamp();
+			LateTask.Update(Time.fixedDeltaTime / 2);
+
+		}
+	}
 }

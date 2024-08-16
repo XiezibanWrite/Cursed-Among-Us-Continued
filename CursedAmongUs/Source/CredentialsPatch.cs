@@ -1,7 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.IO;
-
-
+using System.Reflection;
 using HarmonyLib;
 using TMPro;
 using UnityEngine;
@@ -12,15 +11,15 @@ namespace CursedAmongUs.Source
 	public class CredentialsPatch
 	{
 		[HarmonyPatch(typeof(PingTracker), nameof(PingTracker.Update))]
-		internal static class PingTrackerPatch
+		public static class PingTrackerPatch
 		{
 			static void Postfix(PingTracker __instance)
 			{
+				__instance.text.alignment = TextAlignmentOptions.Top;
 				var position = __instance.GetComponent<AspectPosition>();
-				position.DistanceFromEdge = new Vector3(4f, 0.1f, 0);
-				position.AdjustPosition();
-
-				__instance.text.text = $"<color=#ff351f>CursedAmongUs</color> v{System.Reflection.Assembly.GetExecutingAssembly().GetName().Version}\nModded by Devs-Us \nContinued by <color=#FFFFE0>Among us(XiezibanWrite)</color>\nPing: {AmongUsClient.Instance.Ping} ms";
+				position.Alignment = AspectPosition.EdgeAlignments.Top;
+				__instance.text.text = $"<color=#ff351f>CursedAmongUs</color> v{Assembly.GetExecutingAssembly().GetName().Version}\nModded by Devs-Us \nContinued by <color=#FFFFE0>Among us(XiezibanWrite)</color>\nPing:{AmongUsClient.Instance.Ping}";
+				position.DistanceFromEdge = new Vector3(0f, 0.1f, 0);
 			}
 		}
 
@@ -43,7 +42,7 @@ namespace CursedAmongUs.Source
 
 				var credentialObject = new GameObject("credentialsCAU");
 				var credentials = credentialObject.AddComponent<TextMeshPro>();
-				credentials.SetText($"<color=#ff351f>CursedAmongUs</color> v{System.Reflection.Assembly.GetExecutingAssembly().GetName().Version}\nModded by Devs-Us \nContinued by <color=#FFFFE0>Among us(XiezibanWrite)</color>");
+				credentials.SetText($"<color=#ff351f>CursedAmongUs</color> v{Assembly.GetExecutingAssembly().GetName().Version}\nModded by Devs-Us \nContinued by <color=#FFFFE0>Among us(XiezibanWrite)</color>");
 				credentials.alignment = TMPro.TextAlignmentOptions.Center;
 				credentials.fontSize *= 0.05f;
 				credentials.transform.localPosition = new Vector3(2.0036f, -1f, 5f);
