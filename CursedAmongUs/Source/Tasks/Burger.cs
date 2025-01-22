@@ -6,11 +6,11 @@ namespace CursedAmongUs.Source.Tasks
 {
 	static  class Burger
 	{
-		public static T GetRandom<T>(this Il2CppSystem.Collections.Generic.List<T> list)
-		{
-			var indexData = UnityEngine.Random.Range(0, list.Count);
-			return list[indexData];
-		}
+		// public static T GetRandom<T>(this Il2CppSystem.Collections.Generic.List<T> list)
+		// {
+		// 	var indexData = UnityEngine.Random.Range(0, list.Count);
+		// 	return list[indexData];
+		// }
 		public static T GetRandom<T>(this T[] list)
 		{
 			var indexData = UnityEngine.Random.Range(0, list.Length);

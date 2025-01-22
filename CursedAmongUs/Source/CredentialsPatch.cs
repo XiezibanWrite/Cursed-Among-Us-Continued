@@ -18,8 +18,17 @@ namespace CursedAmongUs.Source
 				__instance.text.alignment = TextAlignmentOptions.Top;
 				var position = __instance.GetComponent<AspectPosition>();
 				position.Alignment = AspectPosition.EdgeAlignments.Top;
-				__instance.text.text = $"<color=#ff351f>CursedAmongUs</color> v{Assembly.GetExecutingAssembly().GetName().Version}\nModded by Devs-Us \nContinued by <color=#FFFFE0>Among us(XiezibanWrite)</color>\nPing:{AmongUsClient.Instance.Ping}";
-				position.DistanceFromEdge = new Vector3(0f, 0.1f, 0);
+				
+				__instance.text.text = $"<color=#ff351f>CursedAmongUs</color> v{Assembly.GetExecutingAssembly().GetName().Version}\nModded by Devs-Us \nContinued by <color=#FFFFE0>Among us(XiezibanWrite)</color>\nPing:{AmongUsClient.Instance.Ping} ms";
+				if (AmongUsClient.Instance.GameState == InnerNet.InnerNetClient.GameStates.Started)
+				{
+                    position.DistanceFromEdge = new Vector3(2.25f, 0.11f, 0);
+				}
+				else
+				{
+					position.DistanceFromEdge = new Vector3(0f, 0.1f, 0);
+				}
+				position.AdjustPosition();
 			}
 		}
 
