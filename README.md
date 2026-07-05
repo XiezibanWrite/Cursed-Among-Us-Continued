@@ -86,6 +86,6 @@ If your suggestion conflicts with any of these, you are still invited to send yo
 | Kyle Smith| `KyleSmith0905`| Main Maintainer|
 | SideSxope| `amsyarasyiq`| Contributor|
 | Dice Flip| `diceflip`| Logo Designer|
-| Among us | XiezibanWriter | Continuer |
-| ELinmei | HayashiUme | Continuer |
+| Among us | `XiezibanWriter` | Continuer |
+| ELinmei | `HayashiUme` | Continuer |
 ---
