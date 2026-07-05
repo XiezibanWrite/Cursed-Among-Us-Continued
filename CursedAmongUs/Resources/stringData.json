@@ -1,4 +1,19 @@
 {
+  "moddedBy": {
+    "0": "Modded by Devs-Us",
+    "13": "由 Devs-Us 制作",
+    "14": "由 Devs-Us 製作"
+  },
+  "ping": {
+    "0": "PING: {0}",
+    "13": "延迟：{0}",
+    "14": "延遲：{0}"
+  },
+  "continuedBy": {
+    "0": "Continued By {0}",
+    "13": "由 {0} 延续",
+    "14": "由 {0 延續}"
+  },
   "DivertPower": {
     "0": "Divert Power (0/2)",
     "13": "转移电力 (0/2)",
