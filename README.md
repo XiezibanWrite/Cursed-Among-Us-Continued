@@ -1,5 +1,5 @@
 [![GitHub release](https://img.shields.io/github/release/Devs-Us/Cursed-Among-Us.svg)](https://github.com/XiezibanWrite/Cursed-Among-Us-Continued/releases)
-[![Github Downloads](https://img.shields.io/github/downloads/Devs-Us/Cursed-Among-Us-/total.svg)](https://github.com//Devs-Us/Cursed-Among-Us/releases)
+[![Github Downloads](https://img.shields.io/github/downloads/Devs-Us/Cursed-Among-Us-/total.svg)](https://github.com/Devs-Us/Cursed-Among-Us/releases)
 
 <h1 align="center">Cursed Among Us</h1>
 <p align="center">
