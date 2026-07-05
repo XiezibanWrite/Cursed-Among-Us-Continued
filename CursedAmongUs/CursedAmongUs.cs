@@ -7,13 +7,10 @@ using CursedAmongUs.Source;
 using HarmonyLib;
 using Il2CppInterop.Runtime.Injection;
 using UnityEngine;
-using Reactor;
-using Reactor.Utilities;
 namespace CursedAmongUs;
 
 [BepInAutoPlugin]
 [BepInProcess("Among Us.exe")]
-[BepInDependency(ReactorPlugin.Id)]
 public partial class CursedAmongUs : BasePlugin
 {
 	public Harmony Harmony { get; } = new(Id);
@@ -23,10 +20,6 @@ public partial class CursedAmongUs : BasePlugin
 	public override void Load()
 	{
 		ModTranslation.Load();
-
-		ReactorCredits.Register<CursedAmongUs>(location =>
-			location == ReactorCredits.Location.MainMenu || location == ReactorCredits.Location.PingTracker);
-
 		Harmony.PatchAll();
 
 	}
