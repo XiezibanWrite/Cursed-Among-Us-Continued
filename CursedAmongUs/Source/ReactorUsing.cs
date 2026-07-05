@@ -19,6 +19,5 @@ namespace CursedAmongUs
 			UnityObject.Destroy(obj);
 		}
 
-
 	}
 }

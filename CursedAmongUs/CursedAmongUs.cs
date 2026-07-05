@@ -1,6 +1,7 @@
 ﻿using BepInEx;
 using BepInEx.Configuration;
 using BepInEx.Unity.IL2CPP;
+using CursedAmongUs.Modules;
 using CursedAmongUs.Source.Tasks;
 using CursedAmongUs.Source;
 using HarmonyLib;
@@ -18,7 +19,7 @@ public partial class CursedAmongUs : BasePlugin
 
 	public override void Load()
 	{
-
+		ModTranslation.Load();
 		Harmony.PatchAll();
 
 	}

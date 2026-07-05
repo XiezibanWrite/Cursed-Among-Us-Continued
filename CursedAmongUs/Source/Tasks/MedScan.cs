@@ -1,7 +1,6 @@
 ﻿using System;
 using HarmonyLib;
 
-
 namespace CursedAmongUs.Source.Tasks
 {
 	internal class CursedMedScan

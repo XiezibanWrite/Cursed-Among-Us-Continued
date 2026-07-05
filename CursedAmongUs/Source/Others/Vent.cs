@@ -9,7 +9,6 @@ namespace CursedAmongUs.Source.Others
 	{
 		private static Single LastVent;
 
-
 		public static void Update()
 		{
 			if (!PlayerControl.LocalPlayer || PlayerControl.LocalPlayer.inVent || LastVent <= 0f) return;

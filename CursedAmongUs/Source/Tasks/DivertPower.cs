@@ -68,7 +68,6 @@ namespace CursedAmongUs.Source.Tasks
 			return new Color(Random.value, Random.value, Random.value, 1.0f);
 		}
 
-
 		[HarmonyPatch(typeof(DivertPowerTask))]
 		private static class DivertPowerTaskPatch
 		{

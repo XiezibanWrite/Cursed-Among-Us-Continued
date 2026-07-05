@@ -1,0 +1,12 @@
+{
+  "DivertPower": {
+    "0": "Divert Power (0/2)",
+    "13": "转移电力 (0/2)",
+    "14": "轉移電力 (0/2)"
+  },
+  "AcceptDivertedPower": {
+    "0": "Accept Diverted Power (1/2)",
+    "13": "接受转移电力 (1/2)",
+    "14": "接受轉移電力 (1/2)"
+  }
+}
