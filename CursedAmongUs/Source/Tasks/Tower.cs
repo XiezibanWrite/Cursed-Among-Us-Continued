@@ -33,6 +33,5 @@ namespace CursedAmongUs.Source.Tasks
 			}
 		}
 
-
 	}
 }

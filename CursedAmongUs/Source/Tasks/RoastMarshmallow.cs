@@ -14,10 +14,8 @@ namespace CursedAmongUs.Source.Tasks
 				float timetoast = (float)rd.Next(120, 300);
 				__instance.timeToToasted = timetoast;
 
-
 			}
 		}
-
 
 	}
 }

@@ -1,8 +1,5 @@
-﻿using csv = CursedAmongUs.Languages.LanguageCSV;
-using pack = CursedAmongUs.Languages.LanguagePack;
 using System.Collections.Generic;
-using System;
-using System.IO;
+using CursedAmongUs.Modules;
 
 namespace CursedAmongUs.Languages;
 
@@ -10,16 +7,8 @@ public static class Language
 {
 	public static string GetString(string s, Dictionary<string, string> replacementDic = null)
 	{
-		var langId = TranslationController.InstanceExists ? TranslationController.Instance.currentLanguage.languageID : SupportedLangs.English;
-		string str = "";
-		if (File.Exists(@"Language\" + LanguagePack.languageName + ".dat"))
-		{
-			str = LanguagePack.GetPString(s);
-		}
-		else
-		{
-			str = csv.GetCString(s, langId);
-		}
+		string str = ModTranslation.GetString(s);
+
 		if (replacementDic != null)
 		{
 			foreach (var rd in replacementDic)
@@ -27,17 +16,12 @@ public static class Language
 				str = str.Replace(rd.Key, rd.Value);
 			}
 		}
+
 		return str;
 	}
+
 	public static void Init()
 	{
-		if (!(File.Exists(@"Language\" + LanguagePack.languageName + ".dat")))
-		{
-			csv.LoadCSV();
-		}
-		else
-		{
-			pack.Load();
-		}
+		ModTranslation.Load();
 	}
 }

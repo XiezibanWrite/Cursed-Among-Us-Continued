@@ -2,6 +2,7 @@
 using System.Linq;
 using HarmonyLib;
 using Il2CppSystem.Text;
+using Reactor.Utilities.Extensions;
 using UnityEngine;
 using Object = UnityEngine.Object;
 using Random = UnityEngine.Random;
@@ -67,7 +68,6 @@ namespace CursedAmongUs.Source.Tasks
 		{
 			return new Color(Random.value, Random.value, Random.value, 1.0f);
 		}
-
 
 		[HarmonyPatch(typeof(DivertPowerTask))]
 		private static class DivertPowerTaskPatch
